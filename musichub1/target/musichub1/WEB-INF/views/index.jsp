@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ include file="header.jsp" %>
 <html>
 <head>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -6,16 +7,11 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <spring:url value="/resources/images" var="image"/>
 <style>
-#header {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;
-}
+
 #nav {
     line-height:30px;
     float:right;
-    background-color:#eeeeee;
+    background-color:gray;
     height:300px;
     width:100px;
     float:left;
@@ -27,13 +23,7 @@
     padding:5px;
     background-color:#eeeeee; 	 
 }
-#footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-   padding:5px;	 	 
-}
+
 
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -47,20 +37,25 @@
 <body>
 
 
-<div class="container">
+ <div class="container">
+ <%--
 <div id="header">
 <h1>MUSIC HUB</h1>
 </div>
+--%>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="home">HOME</a>
+      <a class="navbar-brand" href="guitar">HOME</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="about">ABOUT US</a></li>
-      <li><a href="login">LOGIN</a></li>
-      <li><a href="register">REGISTER</a></li> 
+      <li class="active"><a href="contact">CONTACT US</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
@@ -91,7 +86,7 @@
     <div class="item">
       <img src="${image}/img4.jpg" />
     </div>
-    </div>
+  </div>
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -123,9 +118,13 @@
   </div>
 </div>
   
-  <div id="footer">
+  <%-- <div id="footer">
   Copyright © MusicHub.com
+</div>--%>
+
 </div>
+<div>
+<%@ include file="footer.jsp" %>
 </div>
 </body>
 </html>

@@ -12,7 +12,6 @@ public class ProductDAOImpl
 	        p.add(new ModelExmp("GUITAR","201","9522","NEW","NEW PROD"));
 	        p.add(new ModelExmp("PIANO","202","8451","OLD","OLD PROD"));
 	        p.add(new ModelExmp("VIOLIN","203","7451","NEW","NEW PROD"));
-	        
 	    }
 	     
 	    public List<ModelExmp> getAll()

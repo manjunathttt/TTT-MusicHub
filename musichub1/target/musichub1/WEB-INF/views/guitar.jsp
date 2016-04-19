@@ -14,20 +14,20 @@
   <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <a href="resources/g1.png" class="thumbnail">   
-        <img src ="<c:url value='resources/g1.png'/>">
+      <a href="resources/images/g1.png" class="thumbnail">   
+        <img src ="<c:url value='resources/images/g1.png'/>">
       </a>
     </div>
     <div class="col-lg-4">
-      <a href="resources/g2.jpg" class="thumbnail">
+      <a href="resources/images/g2.jpg" class="thumbnail">
         
-        <img src="<c:url value='resources/g2.jpg'/>" style="width:150px;height:150px">
+        <img src="<c:url value='resources/images/g2.jpg'/>" style="width:150px;height:150px">
       </a>
     </div>
     <div class="col-lg-4">
-      <a href="resources/g3.jpg" class="thumbnail">
+      <a href="resources/images/g3.jpg" class="thumbnail">
               
-        <img src="<c:url value='resources/g3.jpg'/>" style="width:150px;height:150px">
+        <img src="<c:url value='resources/images/g3.jpg'/>" style="width:150px;height:150px">
       </a>
     </div>
    </div>
@@ -36,21 +36,21 @@
  
   <div class="row">
     <div class="col-lg-4">
-      <a href="resources/g4.jpg" class="thumbnail">
+      <a href="resources/images/g4.jpg" class="thumbnail">
          
         <img src="<c:url value='resources/g3.jpg'/>" style="width:150px;height:150px">
       </a>
     </div>
     <div class="col-lg-4">
-      <a href="resources/g5.jpg" class="thumbnail">
+      <a href="resources/images/g5.jpg" class="thumbnail">
        
         <img src="<c:url value='resources/g3.jpg'/>" style="width:150px;height:150px">
       </a>
     </div>
     <div class="col-lg-4">
-      <a href="resources/g6.jpg" class="thumbnail">
+      <a href="resources/images/g6.jpg" class="thumbnail">
               
-        <img src="<c:url value='resources/g3.jpg'/>" style="width:150px;height:150px">
+        <img src="<c:url value='resources/images/g3.jpg'/>" style="width:150px;height:150px">
       </a>
     </div>
   </div>

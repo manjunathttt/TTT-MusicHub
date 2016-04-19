@@ -41,8 +41,16 @@ public class MusicController
 			{
 				return "register";
 			}
-			
-			
+			@RequestMapping("/guitar")
+			public String guitar()
+			{
+				return "guitar";
+			}
+			@RequestMapping("/contact")
+			public String contact()
+			{
+				return "contact";
+			}
 			
 			
 			ProductDAOImpl p = new ProductDAOImpl();

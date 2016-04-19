@@ -17,6 +17,7 @@
             <th>ProductPrice</th>
             <th>ProductCondition</th>
             <th>ProductDescription</th>
+            <th>Select Product</th>
         </tr>
         
         

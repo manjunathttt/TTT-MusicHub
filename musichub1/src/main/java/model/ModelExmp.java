@@ -1,9 +1,16 @@
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ModelExmp
 {
-	private String name;
+	
+	@Id 
 	private String id;
+	
+	private String name;
 	private String price;
 	private String condition;
 	private String description;
@@ -13,25 +20,27 @@ public class ModelExmp
 		super();
 	}
 	
-	public ModelExmp(String name, String id, String price, String condition, String description) {
+	public ModelExmp(String id,String name, String price, String condition, String description) {
 		super();
-		this.name = name;
 		this.id = id;
+		this.name = name;
+		
 		this.price = price;
 		this.condition = condition;
 		this.description = description;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public String getPrice() {
 		return price;
