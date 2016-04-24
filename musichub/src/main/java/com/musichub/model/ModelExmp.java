@@ -1,8 +1,7 @@
 package com.musichub.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -10,15 +9,21 @@ public class ModelExmp
 {
 	
 	@Id 
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column
+	/*@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+    @Column(name = "id", nullable = false)*/
 	private String id;
-	
+	@Column
 	private String name;
+	@Column
 	private String price;
+	@Column
 	private String condition;
+	@Column
 	private String description;
 	
-	public ModelExmp()
+	/*public ModelExmp()
 	{
 		super();
 	}
@@ -31,7 +36,7 @@ public class ModelExmp
 		this.price = price;
 		this.condition = condition;
 		this.description = description;
-	}
+	}*/
 	
 	public String getId() {
 		return id;

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+//import com.musichub.model.Customer;
 import com.musichub.model.ModelExmp;
 
 @Service
@@ -24,17 +25,17 @@ public class ProductService
          return pdi.getProductById(id);
     }
 
-public int insertRow(ModelExmp me) {  
-  return pdi.insertRow(me);  
+public void insertRow(ModelExmp me) {  
+  pdi.insertRow(me);  
  } 
 
-  
- public int updateRow(ModelExmp me) {  
-  return pdi.updateRow(me);  
+
+ public void updateRow(ModelExmp me) {  
+  pdi.updateRow(me);  
  }  
   
 
- public int deleteRow(String id) {  
-  return pdi.deleteRow(id);  
+ public void deleteRow(String id) {  
+  pdi.deleteRow(id);  
  } 
 }

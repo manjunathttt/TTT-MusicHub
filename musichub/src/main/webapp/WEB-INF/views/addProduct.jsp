@@ -16,26 +16,26 @@
 			<h1 style="color:red;">Enter New Product</h1>
 		</div>
 		<div>
-			<form:form commandName="ADDPRD" action="success" method="post">
+			<form:form commandName="pro" class="form-horizontal" id="registration" method="post" action="add">
   				<div class="form-group">
     				<label for="username">PRODUCT ID: </label>
-    				<input type="text" class="form-control" id="username">
+    				<form:input class="form-control" path="id"/>
  	 			</div>
 				<div class="form-group">
     				<label for="phone">PRODUCT NAME: </label>
-    				<input type="text" class="form-control" id="phone">
+    				<form:input class="form-control" path="name"/>
  	 			</div>
 				<div class="form-group">
     				<label for="adrs">PRICE: </label>
-    				<input type="text" class="form-control" id="adrs">
+    				<form:input class="form-control" path="price"/>
  	 			</div>
 				<div class="form-group">
     				<label for="email">CONDITION: </label>
-    				<input type="text" class="form-control" id="email">
+    				<form:input class="form-control" path="condition"/>
  	 			</div>
 				<div class="form-group">
     				<label for="usid">DESCRIPTION: </label>
-    				<input type="text" class="form-control" id="usid">
+    				<form:input class="form-control" path="description"/>
  	 			</div>
   				<button type="submit" class="btn btn-default">ADD PRODUCT</button>
   			</form:form>

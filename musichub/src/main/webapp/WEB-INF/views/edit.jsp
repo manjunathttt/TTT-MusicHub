@@ -15,6 +15,7 @@
 </head>
 <body>
 <%-- <c:url var="userRegistration" value="saveUser.html" /> --%>
+<% com.musichub.model.ModelExmp m = (com.musichub.model.ModelExmp)request.getAttribute("productObject"); %>
 <form:form id="registerForm" commandName="me" method="post"  
    action="success">  
    <div class="container">

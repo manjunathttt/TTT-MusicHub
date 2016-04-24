@@ -46,7 +46,7 @@
 			</c:forEach>
 		</table>
 		<br><br>
-     <a href="addProduct">Click Here to add new Product</a>
+     <a href="addp">Click Here to add new Product</a>
     </div>
     <br><br>
 <div>

@@ -16,30 +16,30 @@
 			<h1 style="color:red;">Enter Details to Register</h1>
 		</div>
 		<div>
-			<form:form commandName="me" action="success" method="post">
+			<form:form commandName="cs" class="form-horizontal" action="addc" method="post">
   				<div class="form-group">
-    				<label for="username">USER NAME: </label>
-    				<input type="text" class="form-control" id="username">
+    				<label for="username">CUSTOMER NAME: </label>
+    				<form:input type="text" class="form-control" path="cusName"/>
  	 			</div>
 				<div class="form-group">
     				<label for="phone">PHONE NO: </label>
-    				<input type="text" class="form-control" id="phone">
+    				<form:input type="text" class="form-control" path="cusPhone"/>
  	 			</div>
 				<div class="form-group">
     				<label for="adrs">ADDRESS: </label>
-    				<input type="text" class="form-control" id="adrs">
+    				<form:input type="text" class="form-control" path="cusAdd"/>
  	 			</div>
 				<div class="form-group">
     				<label for="email">EMAIL ID: </label>
-    				<input type="text" class="form-control" id="email">
+    				<form:input type="text" class="form-control" path="cusEmail"/>
  	 			</div>
 				<div class="form-group">
-    				<label for="usid">USER ID: </label>
-    				<input type="text" class="form-control" id="usid">
+    				<label for="usid">CUSTOMER ID: </label>
+    				<form:input type="text" class="form-control" path="cusId"/>
  	 			</div>
   				<div class="form-group">
     				<label for="pwd">PASSWORD:</label>
-    				<input type="password" class="form-control" id="pwd">
+    				<form:input type="password" class="form-control" path="cusPwd"/>
   				</div>
   				<button type="submit" class="btn btn-default">REGISTER</button>
   			</form:form>

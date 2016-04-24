@@ -1,18 +1,14 @@
 package com.musichub.dao;
 
-import java.io.Serializable;
+
 import java.util.*;
-
-
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.hibernate.Transaction;
 
-
+import com.musichub.model.Customer;
 import com.musichub.model.ModelExmp;
 
 @Transactional
@@ -38,7 +34,7 @@ public class ProductDAOImpl
 	    	p = q.list();
 	    	return p;
 	    }
-	    public ModelExmp getProductById(String id)
+	    /*public ModelExmp getProductById(String id)
 	    {
 	    	
 	    	ModelExmp m = null;
@@ -50,40 +46,43 @@ public class ProductDAOImpl
 	    		}
 	    	}
 	    	return m;	    	
+	    }*/
+	    public ModelExmp getProductById(String pid) 
+	    {
+	            Session session = this.sessionFactory.getCurrentSession();      
+	            ModelExmp m = (ModelExmp) session.get(ModelExmp.class, pid);
+	            return m;
+	     }
+	    public void insertRow(ModelExmp me) 
+	    {  
+	    	  System.out.println("in name dao"+me.getName());
+	    	  Session session = sessionFactory.openSession();  
+	    	 
+	    	  session.save(me);  
+	    	  session.flush();
+	    	  session.close();  
 	    }
-	    public int insertRow(ModelExmp me) 
+	    public void addCus(Customer c)
+	    {
+	    	System.out.println("in name dao"+c.getCusAdd());
+	    	  Session session = sessionFactory.openSession();  
+	    	 
+	    	  session.save(c);  
+	    	  session.flush();
+	    	  session.close(); 
+	    }
+	    public void updateRow(ModelExmp me) 
 	    {  
 	    	  Session session = sessionFactory.openSession();  
-	    	  Transaction tx = session.beginTransaction(); 
-	    	    
-	    	  session.saveOrUpdate(me);  
-	    	  tx.commit();  
-	    	  Serializable id = session.getIdentifier(me);
-	    	  session.close();  
-	    	  return (Integer) id;  
-	    }
-	    public int updateRow(ModelExmp me) 
-	    {  
-	    	  Session session = sessionFactory.openSession();  
-	    	  Transaction tx = session.beginTransaction();  
-	    	   
-	    	  session.saveOrUpdate(me);  
-	    	  tx.commit();  
-	    	  Serializable id = session.getIdentifier(me);
-	    	  session.close();  
-	    	  return (Integer) id;  
+	    	  session.saveOrUpdate(me);
+	    	  session.flush();
 	    }  
-	    public int deleteRow(String id) 
+	    public void deleteRow(String id) 
 	    {  
-	     Session session = sessionFactory.openSession();  
-	     Transaction tx = session.beginTransaction();  
-	    
-	     ModelExmp me = (ModelExmp) session.load(ModelExmp.class, id);  
-	     
-		session.delete(me);  
-	     tx.commit();  
-	     Serializable ids = session.getIdentifier(me);
-	     session.close();  
-	     return (Integer) ids;  
+	    	Session session = sessionFactory.openSession();  
+	     	ModelExmp me = (ModelExmp) session.load(ModelExmp.class, id);  
+	     	session.delete(me); 
+	     	session.flush();
+	     	session.close();    
 	    } 
 }
