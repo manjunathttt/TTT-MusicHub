@@ -1,3 +1,4 @@
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -16,15 +17,17 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
  <mvc:annotation-driven/>
  
  <tx:annotation-driven/>
-
+<mvc:default-servlet-handler/>
     <mvc:resources mapping="/resources/**" location="/resources/images" />
     
     <context:annotation-config />
     <bean class ="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+    
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="WEB-INF/views/"></property>
 		<property name="suffix" value=".jsp"></property>		
 	</bean>
 	
-	
+	<bean id="pdi" class="dao.ProductDAOImpl"/>
+	<bean id="p" class="dao.ProductService"/>
 </beans>

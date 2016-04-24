@@ -1,28 +1,30 @@
 package musicPack;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import dao.ProductDAOImpl;
-import model.ModelExmp;
 import java.util.*;
+
+import dao.ProductService;
+import model.ModelExmp;
 
 @Controller
 public class MusicController 
 {
-	ProductDAOImpl prod=new ProductDAOImpl();
+	@Autowired
+	private ProductService p ;
+	//ProductDAOImpl prod=new ProductDAOImpl();
 			@RequestMapping("/")
 			public String getIndex()
 			{
 				return "index";
 			}
 			@RequestMapping("/home")
-			public String home6546(ModelMap model)
+			public String showData(ModelMap model)
 			{
-				List<ModelExmp> myList=prod.getAll();
+				List<ModelExmp> myList=p.getAll();
 				model.addAttribute("allproduct", myList);
 				return "home";
 			}
@@ -53,16 +55,18 @@ public class MusicController
 			}
 			
 			
-			ProductDAOImpl p = new ProductDAOImpl();
-			
-			@RequestMapping("/Products")
+			/*public ModelAndView getAll(@RequestParam String id)
+			{
+				ModelExmp m = p.getProductById(id);
+				return new ModelAndView("home","spe_prod",m);
+			}*/
+			/*@RequestMapping("/Products")
 			public String pDetails(ModelMap mm)
 			{
 				mm.addAttribute("data",p.getAll());
 				return "home";
-			}
-			@RequestMapping(value="/spec_products", method=RequestMethod.GET)
-		    public ModelAndView getSpecProducts(@RequestParam String pid)
+			}*/
+		    /*public ModelAndView getSpecProducts(@RequestParam String pid)
 		    {
 				ModelExmp me = p.getProductById(pid);
 				if(me!=null)
@@ -73,9 +77,7 @@ public class MusicController
 				{
 					return new ModelAndView("error","",null);
 				}
-				
-				
-		    }
+		    }*/
 }
 
 
