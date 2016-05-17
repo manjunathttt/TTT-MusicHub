@@ -1,27 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ </div>	
+	 <footer>
+	  </footer>
 
-<style>
-#footer {
-    background-color:black;
-    color:white;
-    text-align:center;
-    padding:5px;	 	 
-}
-</style>
-</head>
-<body>
-<div class="container">
-<div id=footer>
-  Copyright © MusicHub.com
-</div>
-</div>
-</body>
-</html>
+	</div>
+
+<script type="text/javascript" src="<c:url value="/resources/js/jquery-2.2.0.min.js" />"></script>
+<script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
+<script src="<c:url value="/resources/js/jquery.rating.pack.js"/>"></script>
+
+</body></html>
+	
