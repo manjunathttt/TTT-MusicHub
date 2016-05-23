@@ -73,6 +73,7 @@ public class UsersDetail implements Serializable
 
     public String getPassword() {
         return password;
+        
     }
 
     public void setPassword(String password) {

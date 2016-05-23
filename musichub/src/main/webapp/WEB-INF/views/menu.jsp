@@ -16,25 +16,29 @@
 
 						  </ul>
 
-						  <ul class="nav pull-right">
+						   <ul class="nav pull-right">
 							   <li class="divider-vertical"></li>
 							   <c:if test="${pageContext.request.userPrincipal.name != null}">
 								<c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
 									<li><a href="<c:url value="/user/cart" />">Cart</a></li>
 								</c:if>
+								
 								<c:if test="${pageContext.request.userPrincipal.name  == 'admin'}">
 									 <li><a href="<c:url value="/admin/musicinventory" />">View Inventory</a></li>
 									 <li><a href="<c:url value="/admin/user" />">View Customer</a></li>
 								</c:if>
+								
 								<li><a>Hello, ${pageContext.request.userPrincipal.name}</a></li>
 									<li><a href="<c:url value="/j_spring_security_logout" />">Sign Out</a></li>
 								</c:if>
+								
+							
 								 <c:if test="${pageContext.request.userPrincipal.name  == null}">
 									<li><a href="<c:url value="/login/" />">Login</a></li>
 									<li><a href="<c:url value="/register" />">Sign Up</a></li>
 								</c:if>
 								
-							 </ul>
+							 </ul> 
 						</div>
 					  </div>
 					</div>
@@ -42,3 +46,4 @@
 			</div>
 		</div>
 		<div class="row">
+		 <%@include file="/WEB-INF/views/footer.jsp" %>

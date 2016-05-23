@@ -10,14 +10,13 @@
 
         <table class="table table-bordered table-striped fs13">
             <thead>
-            <tr class="bg-success" >
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>User Name</th>
-                <th>Enabled</th>
-
-            </tr>
+            	<tr class="bg-success" >
+                	<th>Name</th>
+                	<th>Email</th>
+                	<th>Phone</th>
+                	<th>User Name</th>
+                	<th>Enabled</th>
+            	</tr>
             </thead>
             <c:forEach items="${usersDetailList}" var="usersDetail">
                 <tr>

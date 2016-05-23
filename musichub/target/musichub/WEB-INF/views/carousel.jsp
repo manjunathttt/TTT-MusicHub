@@ -20,17 +20,15 @@
 				<div id="myCarousel" class="carousel slide">
 				<div class="carousel-inner">
 				  <div class="item active">
-					<img src="<c:url value="/resources/images/slide1.jpg"/>" alt=""/>
-					
-
+					<img src="<c:url value="/resources/images/carousel_1.jpg"/>" alt=""/>
 				  </div>
-				  <div class="item">
-					<img src="<c:url value="/resources/images/slide5.jpg"/>" alt=""/>
-					
-				  </div>
-
+				  
 				  <div class="item">
 					<img src="<c:url value="/resources/images/slide4.jpg"/>" alt=""/>
+				  </div>
+
+				  <div class="item">
+					<img src="<c:url value="/resources/images/carousel_3.jpg"/>" alt=""/>
 				  </div>
 				</div>
 

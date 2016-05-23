@@ -1,7 +1,7 @@
 <div class="span3">
 			    <div class="page-header">
 				<h1>				
-					Go Quickly to :
+					Go Quickly to:
 				</h1>
 				</div>
 				<div class="span3 product_list">
