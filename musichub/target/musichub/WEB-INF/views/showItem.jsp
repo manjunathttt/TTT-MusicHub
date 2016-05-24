@@ -6,7 +6,7 @@
 <div class="span9 center margin-bottom"> 
 					<h3>Product Details</h3>
 					</div>
-        <div class="container" ng-app = "addToCartApp">
+        <div class="container" ng-app="addToCartApp">
                 <div class="row">
 	 <div class="span3">
 		<img src="<c:url value="/resources/images/${item.itemId}.png" /> " alt="image"/>
@@ -51,23 +51,14 @@
 									</c:if>
 								</p>
 							</div>	
-							
-			
 						</div>	
 		
 						<div class="span6">
 						
-							
 						</div>	
-		
-		 			</div>	
-
-  				</div>
-
-
-                    
-                    
-                </div>
+					</div>	
+				</div>
+			</div>
 
         <script src="<c:url value="/resources/js/ordercontroller.js" /> "></script>
         <%@include file="/WEB-INF/views/footer.jsp" %>
